@@ -1,12 +1,12 @@
 # Sujit Gorai — Portfolio
 
-React + TypeScript + Vite + Tailwind portfolio.
+Personal portfolio website built with React, TypeScript, Vite, and Tailwind CSS.
 
-```bash
-npm install
-npm run dev      # local dev server
-npm run build    # production build in dist/
-```
+## About
 
-All content lives in `src/data/portfolioData.ts` (name, links, projects, skills, timeline, certifications).
-Images are in `public/images/`.
+Full Stack Java Developer skilled in Spring Boot, JavaScript, and building end-to-end web applications. Passionate about building real-world problem-solving applications, designing REST APIs, and working with relational databases to build reliable, scalable backend systems.
+
+- 🎓 B.Tech, Computer Science & Engineering (AI & ML) — Asansol Engineering College (2023–2027)
+- 📍 Dhanbad, Jharkhand, India
+- 📧 sujitgorai920@gmail.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/YOUR-USERNAME/)

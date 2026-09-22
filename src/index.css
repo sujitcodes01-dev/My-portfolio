@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Syne', sans-serif;
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --color-charcoal-950: #0c0d0e;
+  --color-charcoal-900: #111215;
+  --color-charcoal-800: #18191e;
+  --color-charcoal-700: #24262d;
+  --color-charcoal-600: #383b44;
+  
+  --color-paper-50: #fbfbf9;
+  --color-paper-100: #f4f3ef;
+  --color-paper-200: #e5e4de;
+  --color-paper-400: #9da0a8;
+  --color-paper-600: #5e6068;
+  
+  --color-vermilion-500: #e65c24;
+  --color-vermilion-400: #ff682b;
+  --color-vermilion-600: #c94b17;
+}
+
+:root {
+  --bg-primary: #0c0d0e;
+  --bg-secondary: #111215;
+  --text-primary: #f4f3ef;
+  --text-secondary: #9da0a8;
+  --accent: #e65c24;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #0c0d0e;
+  color: #f4f3ef;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: clip;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0d0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #24262d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e65c24;
+}
+
+/* Subtle Film Grain Noise Texture Overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Hairline borders */
+.hairline-b {
+  border-bottom: 1px solid rgba(244, 243, 239, 0.08);
+}
+.hairline-t {
+  border-top: 1px solid rgba(244, 243, 239, 0.08);
+}
+.hairline-l {
+  border-left: 1px solid rgba(244, 243, 239, 0.08);
+}
+.hairline-r {
+  border-right: 1px solid rgba(244, 243, 239, 0.08);
+}
+
+/* Lenis Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Accessible focus states */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 2px solid #e65c24;
+  outline-offset: 3px;
+}
+
+/* Prefers-reduced-motion: cancel continuous animations */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
